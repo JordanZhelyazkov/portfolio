@@ -1,5 +1,13 @@
+nav > .nav-button{
+    background-color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
 nav > .nav-button:active{
     background-color: blue;
     font-size: 20px;
+    text-decoration: underline;
 }
 
