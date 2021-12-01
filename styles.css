@@ -11,3 +11,38 @@ nav > .nav-button:active{
     text-decoration: underline;
 }
 
+.projects-title {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.description {
+    font-weight: bolder;
+}
+
+.github-projects {
+    display: grid;
+    flex-direction: column;
+    float: left;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.web-skills {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    margin-right: 20%;
+
+}
+
+.skills{
+    margin-right: 10%;
+    font-weight: bolder;
+}
+
+.weaknesses{
+    font-weight: bolder;
+}
