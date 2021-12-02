@@ -12,6 +12,7 @@ nav > .nav-button:active{
 }
 
 
+
 .images-container{
     margin: auto;
     width: 50%;
@@ -42,4 +43,24 @@ nav > .nav-button:active{
     color: white;
     z-index: 10;
     font-size: 40px;
+=======
+.random-img{
+    width: 270px;
+    height: 170px;
+    margin: 10px;
+    opacity: 1.0;
+}
+
+.random-img:hover {
+    opacity: 0.5;
+}
+
+.images-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+
 }
