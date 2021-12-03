@@ -24,9 +24,27 @@ nav > .nav-button:active{
 
 .images-container{
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 
+}
+.accordionItem{
+    margin-top: 5px;
+    border: solid 1px black;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 20px;
+    background: lightblue;
+    justify-content: center;
+    text-align: center;
+}
+
+.accordion{
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
 }
