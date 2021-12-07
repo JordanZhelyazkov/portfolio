@@ -1,3 +1,4 @@
+
 nav > .nav-button{
     background-color: white;
     font-size: 15px;
@@ -44,8 +45,9 @@ nav > .nav-button:active{
     font-weight: bolder;
 }
 
-.weaknesses{
+.weaknesses {
     font-weight: bolder;
+}
 
 .random-img{
     width: 270px;
@@ -64,4 +66,35 @@ nav > .nav-button:active{
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-  }
+}
+@media (min-width: 480px) {
+    .nav-bottom {
+        display: none;
+    }
+}
+
+@media (max-width: 480px)  {
+    .nav-bottom {
+        display: flex;
+        grid-gap: 20px;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        background: blue;
+        color:whitesmoke;
+        font-family: sans-serif;
+    }
+    .nav-item {
+        text-align: center;
+        display: table;
+    }
+
+    .nav-item> a {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+}
