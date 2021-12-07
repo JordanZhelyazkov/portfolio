@@ -11,7 +11,6 @@ nav > .nav-button:active{
     text-decoration: underline;
 }
 
-
 .images-container{
     margin: auto;
     width: 50%;
@@ -42,4 +41,60 @@ nav > .nav-button:active{
     color: white;
     z-index: 10;
     font-size: 40px;
+}
+
+.projects-title {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.description {
+    font-weight: bolder;
+}
+
+.github-projects {
+    display: grid;
+    flex-direction: column;
+    float: left;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.web-skills {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    margin-right: 20%;
+
+}
+
+.skills{
+    margin-right: 10%;
+    font-weight: bolder;
+}
+
+.weaknesses {
+    font-weight: bolder;
+}
+
+.random-img{
+    width: 270px;
+    height: 170px;
+    margin: 10px;
+    opacity: 1.0;
+}
+
+.random-img:hover {
+    opacity: 0.5;
+}
+
+.images-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
 }
