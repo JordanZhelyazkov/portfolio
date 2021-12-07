@@ -4,13 +4,11 @@ nav > .nav-button{
     text-decoration: none;
 }
 
-
 nav > .nav-button:active{
     background-color: blue;
     font-size: 20px;
     text-decoration: underline;
 }
-
 
 .projects-title {
     text-align: center;
@@ -44,8 +42,9 @@ nav > .nav-button:active{
     font-weight: bolder;
 }
 
-.weaknesses{
+.weaknesses {
     font-weight: bolder;
+}
 
 .random-img{
     width: 270px;
@@ -59,9 +58,29 @@ nav > .nav-button:active{
 }
 
 .images-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordionItem {
+    border: solid 1px black;
+    width: 400px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: lightblue;
+    text-align: center;
+}
+.accordion{
+   margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
