@@ -58,27 +58,29 @@ nav > .nav-button:active{
 }
 
 .images-container{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-.accordionItem{
-    margin-top: 5px;
+
+.accordionItem {
     border: solid 1px black;
-    width: 50%;
+    width: 400px;
     cursor: pointer;
     border-radius: 20px;
     background: lightblue;
-    justify-content: center;
     text-align: center;
 }
-
 .accordion{
-    margin-top: 250px;
+   margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
 }
