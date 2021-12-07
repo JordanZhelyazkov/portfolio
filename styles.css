@@ -24,20 +24,9 @@
 }
 
 .content {
+    width: 1200px;
     display: grid;
     flex-direction: column;
-    float: left;
-    margin-top: 10%;
-    margin-left: 20%;
-}
-
-.web-skills {
-    float: right;
-    display: flex;
-    flex-direction: row;
-    margin-top: 10%;
-    margin-right: 20%;
-
 }
 
 .skills{
@@ -71,4 +60,6 @@
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    padding: 20px;
 }
