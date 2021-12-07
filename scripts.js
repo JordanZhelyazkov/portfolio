@@ -1,5 +1,5 @@
 
-const boxes = Array.from(document.querySelectorAll(".box"));
+const boxes = document.querySelectorAll(".box");
 const winner = document.querySelector('#winner');
 const resBtn = document.querySelector("#restart");
 
@@ -8,96 +8,93 @@ boxes.forEach(box => {
     box.addEventListener("click", checkTheBox)
 })
 
-const spaces = [];
-const tick_circle = 'O';
-const tick_x = 'X';
-let currentPlayer = tick_circle;
-
-function checkTheBox(event){
-const id = event.target.id;
-if(!spaces[id]){
-    spaces[id] = currentPlayer;
-    event.target.innerText = currentPlayer;
-    if(playerWon()){
-        winner.innerText = `${currentPlayer} has won!`;
-        restart();
-        return;
-    }
-    if(playerDraw()){
-        return;
-    }
-    currentPlayer = currentPlayer === tick_circle ? tick_x : tick_circle;
-}
-}
-
-function playerWon(){
-    if(spaces[0] === currentPlayer){
-        if(spaces[1] === currentPlayer && spaces[2] === currentPlayer){
-            winner.innerText = `${currentPlayer} won`;
-            return true;
-        }
-        if(spaces[3] === currentPlayer && spaces[6] === currentPlayer){
-            winner.innerText = `${currentPlayer} won`;
-            return  true
-        }
-        if(spaces[4] === currentPlayer && spaces[8] === currentPlayer){
-            winner.innerText = `${currentPlayer} won`;
-            return true;
-        }
-    }
-    if(spaces[8] === currentPlayer){
-        if(spaces[2] === currentPlayer && spaces[5] === currentPlayer){
-            winner.innerText = `${currentPlayer} won`;
-            return true;
-        }
-        if(spaces[7] === currentPlayer && spaces[6] === currentPlayer){
-            winner.innerText = `${currentPlayer} won`;
-            return true;
-        }
-
-    }
-    if(spaces[4] === currentPlayer){
-        if (spaces[1] === currentPlayer && spaces[7] === currentPlayer) {
-            winner.innerText = `${currentPlayer} won`;
-            return true;
-        }
-        if (spaces[3] === currentPlayer && spaces[5] === currentPlayer) {
-            winner.innerText = `${currentPlayer} won`;
-            return true;
-        }
-        if (spaces[2] === currentPlayer && spaces[6] === currentPlayer) {
-            winner.innerText = `${currentPlayer} won`;
-            return true;
-        }
-    }
-}
-
-function  playerDraw(){
-    let draw = 0;
-    spaces.forEach((space, index) => {
-        if(spaces[index] !== null) {
-            draw++;
-        }
-        if (draw === 9){
-            winner.innerText = "Draw";
-            restart();
-        }
-    })
-}
-
-function  restart(){
-
-    spaces.forEach((space, i) => {
-        spaces[i].innerText = null;
-    })
-    boxes.forEach(box => {
-        box.innerText = "";
-
-    })
-    winner.innerText = 'Play again';
-
-}
+const cells = [];
+console.log(cells);
 console.log(boxes);
-console.log(spaces);
-resBtn.addEventListener('click',restart);
-restart();
+const playerX = "X";
+const playerO = "O";
+let currentPlayer = playerX;
+
+function  checkTheBox(event) {
+    let currentId = event.target.id;
+    if(cells[currentId] != null){
+        return;
+    }
+
+    cells[currentId] = currentPlayer;
+    event.target.textContent = currentPlayer;
+    if(playerWin()){
+        restart();
+        winner.textContent = "";
+        return;
+    } else if (draw()){
+        restart();
+        winner.textContent = "";
+        return;
+    }
+    currentPlayer = currentPlayer === playerX ? playerO : playerX;
+    console.log(currentPlayer);
+    console.log(cells);
+
+}
+
+function playerWin(){
+    if(cells[0] === currentPlayer){
+        if(cells[1] === currentPlayer && cells[2] === currentPlayer){
+            winner.textContent = `Player ${currentPlayer} won on the top row`;
+            return true;
+        }
+        if(cells[3] === currentPlayer && cells[6] === currentPlayer){
+            winner.textContent = `Player ${currentPlayer} won on the left column`;
+            return true;
+        }
+        if(cells[4] === currentPlayer && cells[8] === currentPlayer){
+            winner.textContent = `Player ${currentPlayer} won on the the diagonal`;
+            return true;
+        }
+    }
+    if(cells[8] === currentPlayer){
+        if(cells[7] === currentPlayer && cells[6] === currentPlayer){
+            winner.textContent = `Player ${currentPlayer} won on the bottom row`;
+            return true;
+        }
+        if(cells[5] === currentPlayer && cells[2] === currentPlayer){
+            winner.textContent = `Player ${currentPlayer} won on the right column`;
+            return true;
+        }
+    }
+    if(cells[4] === currentPlayer){
+        if(cells[1] === currentPlayer && cells[7] === currentPlayer){
+            winner.textContent = `Player ${currentPlayer} won on the middle column`;
+            return true;
+        }
+        if(cells[3] === currentPlayer && cells[5] === currentPlayer){
+            winner.textContent = `Player ${currentPlayer} won on the middle row`;
+            return true;
+        }
+    }
+}
+
+ function restart(){
+    setTimeout(() => {
+   boxes.forEach((box, index) => {
+       box.textContent = "";
+   })
+     empty(cells);
+   }, 2000)
+ }
+
+   function draw(){
+    let counter = 0;
+    cells.forEach(cell => {
+        if(cell != null){
+            counter++;
+        }
+    });
+    if(counter === 9){
+        winner.textContent = `Draw!`;
+        return true;
+    }
+   }
+
+const empty = cells => cells.length = 0;
