@@ -1,16 +1,17 @@
-nav > .nav-button{
+.nav-bar > .nav-button {
     background-color: white;
-    font-size: 15px;
+    font-size: 2rem;
     text-decoration: none;
+    border: 3px solid #d4e1e3;
+    border-radius: 20px;
+    padding: 5px;
 }
 
-
-nav > .nav-button:active{
-    background-color: blue;
-    font-size: 20px;
-    text-decoration: underline;
+.nav-bar {
+    position: absolute;
+    top: 1%;
+    right: 0;
 }
-
 
 .projects-title {
     text-align: center;
@@ -22,7 +23,7 @@ nav > .nav-button:active{
     font-weight: bolder;
 }
 
-.github-projects {
+.content {
     display: grid;
     flex-direction: column;
     float: left;
@@ -44,17 +45,17 @@ nav > .nav-button:active{
     font-weight: bolder;
 }
 
-.weaknesses{
+.weaknesses {
     font-weight: bolder;
+}
 
-.random-img{
+.images-container > img {
     width: 270px;
     height: 170px;
     margin: 10px;
     opacity: 1.0;
 }
-
-.random-img:hover {
+.images-container > img:hover {
     opacity: 0.5;
 }
 
@@ -65,3 +66,9 @@ nav > .nav-button:active{
     margin-right: -50%;
     transform: translate(-50%, -50%);
   }
+
+.main-container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
