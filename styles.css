@@ -43,12 +43,19 @@ nav > .nav-button:active{
 
 #restart {
     font-size: 1.5em;
+    width: 150px;
     background: lime;
-    margin: 0 auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
 }
-
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+}
+
+.container {
+    margin-top: 20px;
+    text-align: center;
 }
