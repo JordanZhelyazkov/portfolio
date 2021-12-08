@@ -1,9 +1,10 @@
 
-let display = document.querySelector('.display-div');
-let buttons = Array.from(document.getElementsByClassName('buttonCalc'));
+  let display = document.querySelector('.display-div');
+  const buttonsDiv = document.querySelector(".buttons");
+  let buttons = Array.from(buttonsDiv.querySelectorAll("div"));
 
-buttons.map(button => {
-    button.addEventListener("click", (e) => {
+  buttons.map(button => {
+     button.addEventListener("click", (e) => {
         switch (e.target.innerText){
             case "C":
                 display.innerText = "";
@@ -30,13 +31,12 @@ buttons.map(button => {
             default:
                 display.innerText += e.target.innerText;
         }
+     })
+  })
 
-    })
-})
-
-function calcResult(currChar, displayText){
+  function calcResult(currChar, displayText){
         const index = displayText.indexOf(currChar);
         const firstExpression = displayText.substring(0, index);
         const secondExpression = displayText.substring(index+1);
         return eval(`${firstExpression} ${currChar} ${secondExpression}`);
-}
+  }
