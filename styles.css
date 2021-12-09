@@ -44,8 +44,6 @@ nav > .nav-button:active{
     font-weight: bolder;
 }
 
-.weaknesses{
-    font-weight: bolder;
 
 .random-img{
     width: 270px;
@@ -64,4 +62,33 @@ nav > .nav-button:active{
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-  }
+}
+
+.display {
+    font-size: 5em;
+    color: white;
+}
+
+.sub-display {
+    color: white;
+    font-size: 2em;
+}
+
+main{
+    text-align: center;
+    padding: 100px;
+    background-color: black;
+}
+
+.main-container {
+    border: 5px solid white;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.main-container > p {
+    color: white;
+    font-size: 2em;
+}
